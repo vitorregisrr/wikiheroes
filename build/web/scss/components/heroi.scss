@@ -1,0 +1,64 @@
+.heroi {
+    width: 100%;
+    cursor: pointer;
+    @extend %dflex;
+    flex-direction: column;
+    @include scale(0.9);
+    @include transition(0.4s, all, ease-in);
+    text-align: center;
+
+    &__img {
+        width: 100%;
+        overflow: hidden;
+        transition: inherit;
+        padding-bottom: 10px;
+
+        img {
+           filter: none;
+           height: 210px;
+           object-fit: contain;
+           border-radius: 50%;
+        }
+    }
+
+    &__content {
+        padding: 10px;
+        transition: inherit;
+    }
+
+    &__title {
+        font-weight: bold;
+        color: $main-color;
+        transition: inherit;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+        transition: inherit;
+    }
+
+    &__desc {
+        font-weight: 100;
+        font-size: 13px;
+        max-width: 90%;
+        letter-spacing: 2px;
+        color: #fff;
+        transition: inherit;
+        margin-bottom: 5px;
+    }
+
+    &__link {
+        transition: inherit;
+
+        >a {
+            transition: inherit;
+            color: #fff;
+        }
+    }
+
+    >p {
+        >a {
+            color: #fff;
+            font-size: 17px;
+        }
+    }
+
+}

@@ -1,0 +1,27 @@
+.btn-main{
+    @extend %btn;
+    background-color: $main-color;
+    text-transform: uppercase;
+    color: #ffffff  !important;
+    text-align: center;
+
+    &:hover{
+       @include scale(1.05);
+       color: #fff;
+    }
+}
+
+.btn-main--outline{
+    @extend %btn;
+    background-color: transparent;
+    border: 2px solid $main-color;
+    color: $main-color !important;
+    text-transform: uppercase;
+    text-align: center;
+
+    &:hover{
+       @include scale(1.05);
+       background-color: $main-color;
+       color: #fff !important;
+    }
+}

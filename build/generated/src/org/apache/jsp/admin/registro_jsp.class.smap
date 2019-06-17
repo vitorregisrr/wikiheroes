@@ -1,0 +1,16 @@
+SMAP
+registro_jsp.java
+JSP
+*S JSP
+*F
++ 0 cabecalho.jsp
+admin/cabecalho.jsp
++ 1 registro.jsp
+admin/registro.jsp
++ 2 rodape.jsp
+admin/../principal/rodape.jsp
+*L
+1,99:50
+1#1,27:149
+1#2,11:175
+*E

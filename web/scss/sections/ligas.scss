@@ -1,0 +1,117 @@
+#ligas {
+    min-height: 60vh;
+    @extend %dflex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+
+    .ligas__desc {
+        @extend %dflex;
+        justify-content: center;
+        flex-direction: column;
+
+        .title {
+            font-weight: 700;
+            font-size: 40px;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            line-height: 90%;
+            color: $second-color;
+        }
+
+        .sub-title {
+            font-weight: 200;
+            font-size: 20px;
+            letter-spacing: 1px;
+            line-height: 94%;
+            color: rgb(255, 255, 255);
+        }
+
+    }
+
+    .ligas-slider {
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 500px;
+        width: 100%;
+        @extend %dflex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &.non-webp{
+            background-image: url(../images/liga-bg.png);
+        }
+
+        &.webp{
+            background-image: url(../images/liga-bg.webp);
+        }
+
+        @media (max-width: 570px) {
+            & {
+                background-size: cover;
+            }
+        }
+
+        .owl-carousel {
+            width: 100%;
+            height: 350px;
+        }
+
+
+        &__item {
+            @extend %dflex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding-top: 30px;
+            height: 300px;
+
+            .liga__text {
+                font-size: 16px;
+                font-weight: 300;
+                max-height: 200px;
+                margin-bottom: 20px;
+                padding-top: 20px;
+                max-width: 60%;
+
+                @media screen and(max-width: 572px){
+                    max-width: 80%
+                }
+            }
+
+            .liga__name {
+                font-size: 18px;
+                font-weight: 400;
+                text-transform: uppercase;
+            }
+
+            .liga__img {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .ligas__arrows {
+        >button {
+            font-size: 30px;
+            color: #31a2d67e;
+            background: none;
+            border: none;
+            @include transition(0.2s);
+            margin: 0 20px 0 0;
+            padding: 0;
+
+            &:hover {
+                color: $main-color;
+                cursor: pointer;
+            }
+        }
+    }
+}

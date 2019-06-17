@@ -1,0 +1,158 @@
+.logo{
+    font-size: 30px;
+    font-weight: bolder;
+    color: #fff;
+    @include transition;
+}
+
+//underlines
+%underline{
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+}
+
+.underline-green{
+    @extend %underline;
+    
+    &.non-webp{
+        background-image: url(../images/underline-green.png);
+    }
+
+    &.webp{
+        background-image: url(../images/underline-green.webp);
+    }
+}
+
+.underline-white{
+    @extend %underline;
+
+    &.non-webp{
+        background-image: url(../images/underline-white.png);
+    }
+
+    &.webp{
+        background-image: url(../images/underline-white.webp);
+    }
+}
+
+.underline-red{
+    @extend %underline;
+
+    &.non-webp{
+        background-image: url(../images/underline-red.png);
+    }
+
+    &.webp{
+        background-image: url(../images/underline-red.webp);
+    }
+}
+
+
+//titles
+.inner-title{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+
+    .small{
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 20px;
+        display: block;
+    }
+
+    @media screen and (max-width: $bp-sm) {
+        font-size: 35px;
+
+        .small{
+            font-size: 23px;
+        }
+    }
+}
+
+.inner-desc{
+    padding: 10px 0;
+    font-size: 17px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-weight: lighter;
+    margin: 0;
+
+    @media screen and (max-width: $bp-sm) {
+        font-size: 16px;
+    }
+}
+
+
+
+//lines
+hr.line--white, hr.line--navy{
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 250px;
+    height: 26px;
+    border: none;
+    margin: 0 auto 20px auto;
+    @include scale(0.7);
+}
+
+.line--white{
+
+    &.non-webp{
+        background-image: url(../images/line--white.png);
+    }
+
+    &.webp{
+        background-image: url(../images/line--white.webp);
+    }
+}
+
+.line--navy{
+    
+    &.non-webp{
+        background-image: url(../images/line.png);
+    }
+
+    &.webp{
+        background-image: url(../images/line.webp);
+    }
+}
+
+//colors
+.color-main{
+    color: $main-color;
+}
+
+.color-second{
+    color: $second-color;
+}
+
+.color-navy{
+    color: $main-navy;
+}
+
+//vertical-lines
+%vertical-line{
+    width: 1px;
+    height: 100px;
+    border-radius: 1px;
+    margin: 50px 0;
+}
+
+.vertical-line--blue{
+    @extend %vertical-line;
+    background-color: $main-navy;
+}
+
+.background-title{
+    position: absolute;
+    top: 60%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    line-height: 50px;
+    letter-spacing: 3px;
+    font-size: 60px;
+    color: rgba(179, 179, 179, 0.116);
+}

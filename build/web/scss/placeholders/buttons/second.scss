@@ -1,0 +1,27 @@
+.btn-second{
+    @extend %btn;
+    background-color: $second-color;
+    text-transform: uppercase;
+    color: #ffffff  !important;
+    text-align: center;
+
+    &:hover{
+       @include scale(1.05);
+       color: #fff;
+    }
+}
+
+.btn-second--outline{
+    @extend %btn;
+    background-color: transparent;
+    border: 2px solid $second-color;
+    color: $second-color !important;
+    text-transform: uppercase;
+    text-align: center;
+
+    &:hover{
+       @include scale(1.05);
+       background-color: $second-color;
+       color: #fff !important;
+    }
+}

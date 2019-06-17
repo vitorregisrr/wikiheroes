@@ -1,0 +1,143 @@
+#last-heroes {
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    padding-top: 180px;
+    @extend %dflex;
+    justify-content: center;
+    align-items: center;
+
+    &.non-webp {
+        background-image: url(../images/hero-2.png);
+    }
+
+    &.webp {
+        background-image: url(../images/hero-2.webp);
+    }
+
+    .inner-title,
+    .inner-desc {
+        color: #fff;
+    }
+
+    @media screen and (min-width: 1820px) {
+        background-position: center;
+    }
+
+    .centered {
+        width: 100%;
+    }
+}
+
+.heroes-slider {
+
+    .owl-carousel {
+
+        .owl-dots {
+            width: 100%;
+            @extend %dflex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 0;
+
+            .owl-dot {
+                width: 20px;
+                height: 10px;
+                border-radius: 20px;
+                margin: 0 5px;
+                background-color: $second-color;
+                opacity: .5;
+                @include transition(0.2s);
+
+                &:hover,
+                &.active {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .owl-item {
+            padding: 20px 0;
+            z-index: 2;
+            @extend %dflex;
+            justify-content: center;
+            align-items: center;
+
+            .heroi {
+
+                &__img {
+                    img {
+                        filter: grayscale(70%) blur(1px);
+                    }
+                }
+
+                &__title {
+                    color: $main-color;
+                }
+
+                &__desc {
+                    color: #fff;
+                }
+
+                &__link {
+
+                    >a {
+                        color: rgb(211, 211, 211);
+                        opacity: (0.5);
+                    }
+                }
+
+            }
+
+            // Item do Centro e hover
+            &.center {
+                z-index: 3;
+
+                .heroi {
+                    @include scale(1.02);
+                }
+            }
+
+            &.center,
+            &:hover {
+                .heroi {
+
+                    &__img {
+                        >img {
+                            filter: none;
+                        }
+                    }
+
+                    &__title {
+                        color: $second-color;
+                    }
+
+                    &__list {
+                        >li {
+                            color: #fff;
+                        }
+                    }
+
+                    &__link {
+
+                        >a {
+                            color: #fff;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+
+                    >p {
+                        >a {
+                            color: #fff;
+                            font-size: 17px;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
